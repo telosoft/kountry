@@ -31,6 +31,18 @@ __version__ = (0, 0, 0, "dev", 0)
 from collections import OrderedDict
 
 
+class classproperty(object):
+    """
+    Helps to define properties class instances.
+
+    Adopted from: http://stackoverflow.com/questions/3203286/
+    """
+    def __init__(self, getter):
+        self.getter= getter
+
+    def __get__(self, instance, owner):
+        return self.getter(owner)
+
 class Country(object):
     """
     Provides the canonical representation of a country object and
@@ -67,6 +79,10 @@ class Country(object):
 
     def __repr__(self):
         return self.name
+
+    @classproperty
+    def codes(cls):
+        return cls.DB.keys()
 
     @classmethod
     def get(cls, identifier):
