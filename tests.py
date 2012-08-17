@@ -8,6 +8,7 @@ class TestDBFunctions(unittest.TestCase):
         self.assertEqual(Country.get("TR"), Country.get("TUR"))
         self.assertEqual(Country.get("TUR"), Country.get("792"))
         self.assertEqual(Country.get("792"), Country.get("TR"))
+        self.assertEqual(Country.get("TR"), Country.get("Turkey"))
 
     def test_put(self):
         new_country = Country("XX", "XXX", "000", "XX", "XX", "XXX", ".xx",

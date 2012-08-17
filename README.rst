@@ -38,14 +38,14 @@ Retrieve a *Country* object for a given identifier::
     >>> turkey.currency
     'TRY'
 
-The identifier can be any of ``code_2``, ``code_3`` or ``enum``
-attributes of a *Country* object::
+The identifier can be any of ``code_2``, ``code_3``, ``enum`` or
+``name`` attributes of a *Country* object::
 
     >>> Country.get("TR") == Country.get("TUR")
     True
     >>> Country.get("TUR") == Country.get("792")
     True
-    >>> Country.get("792") == Country.get("TR")
+    >>> Country.get("792") == Country.get("Turkey")
     True
 
 Quick API Reference
@@ -59,8 +59,8 @@ built around it: ``Country``.
 Class Attributes:
 -----------------
 
-- ``DB``: Provides the country database with three indices (for
-  ``code_2``, ``code_3`` and ``enum``).
+- ``DB``: Provides the country database with four indices (for
+  ``code_2``, ``code_3``, ``enum`` and ``name``).
 
 Object Attributes:
 ------------------
