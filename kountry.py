@@ -26,7 +26,7 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-__version__ = (0, 0, 0, "dev", 0)
+__version__ = (0, 0, 1, "dev", 0)
 
 from collections import OrderedDict
 
