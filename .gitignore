@@ -1,0 +1,8 @@
+*~
+*.log
+*.pot
+*.pyc
+build/
+dist/
+versiontools-*.egg/
+*.egg-info/
